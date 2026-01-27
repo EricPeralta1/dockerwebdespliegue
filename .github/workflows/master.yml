@@ -15,6 +15,6 @@ on:
         - uses: SamKirkland/FTP-Deploy-Action@4.0.0
           with:
             server: ftpupload.net
-            username:
-            password:
-            server-dir:
+            username: ${ { secrets.FTP_USERNAME } }
+            password: ${ { secrets.FTP_PASSWORD } }
+            server-dir: /public_html/pruebadominio.byethost16.com
