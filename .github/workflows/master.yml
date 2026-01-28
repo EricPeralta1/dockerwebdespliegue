@@ -17,4 +17,4 @@ jobs:
           server: ftpupload.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/pruebadominio.byethost16.com/
+          server-dir: /htdocs/
