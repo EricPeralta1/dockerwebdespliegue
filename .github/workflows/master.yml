@@ -1,9 +1,8 @@
-name: Desplegar a Producción
 on:
   push:
     branches:
       - master
-
+name: Desplegar a Producción
 jobs:
   web-deploy:
     name: Desplegar Aplicación Web
