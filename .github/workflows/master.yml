@@ -1,4 +1,4 @@
-name: Desplegar a Producciónx
+name: Desplegar a Producción
 on:
   push:
     branches:
@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Coger código actualizado
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftpupload.net
           username: ${ { secrets.FTP_USERNAME } }
