@@ -1,12 +1,15 @@
+name: Desplegar a Producción
+
 on:
   push:
     branches:
       - master
-name: Desplegar a Producción
+
 jobs:
   web-deploy:
     name: Desplegar Aplicación Web
     runs-on: ubuntu-latest
+
     steps:
       - name: Coger código actualizado
         uses: actions/checkout@v4
@@ -15,6 +18,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftpupload.net
-          username: ${ { secrets.FTP_USERNAME } }
-          password: ${ { secrets.FTP_PASSWORD } }
-          server-dir: /public_html/pruebadominio.byethost16.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/pruebadominio.byethost16.com/
